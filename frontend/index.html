@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Thoughtful cards, invitations, gifts, and experiences for life's best moments."
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+    <meta name="theme-color" content="#fffaf5" />
+    <title>Card Net — make a little moment memorable</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Card Net home">
+        <span class="wordmark-icon" aria-hidden="true">C</span> Card Net
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#shop">Shop</a>
+        <a href="#about">Our story</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="cart-button" id="cart-open" type="button" aria-label="Open shopping bag">
+        <span aria-hidden="true">Bag</span>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> LITTLE THINGS, BIG FEELINGS</p>
+          <h1 id="hero-title">Make a little moment <span>memorable.</span></h1>
+          <p class="hero-description">
+            The right card, a lovely invitation, a ticket to look forward to.
+            Find your reason to celebrate.
+          </p>
+          <a class="button button-dark" href="#shop">Find your something <span aria-hidden="true">↗</span></a>
+          <div class="hero-note">
+            <span class="note-stars" aria-hidden="true">★★★★★</span>
+            <span>Made with care, picked by you.</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="A cheerful collection of celebration cards and gifts">
+          <div class="art-sun"></div>
+          <div class="art-card art-card-back"><span>the<br />good<br />stuff</span><b>✳</b></div>
+          <div class="art-card art-card-front"><span>oh, happy<br /><em>day!</em></span><b>✿</b></div>
+          <span class="art-spark art-spark-one" aria-hidden="true">✳</span>
+          <span class="art-spark art-spark-two" aria-hidden="true">✦</span>
+          <span class="art-caption">A little joy, delivered.</span>
+        </div>
+      </section>
+
+      <section class="shop-section page-section" id="shop" aria-labelledby="shop-title">
+        <div class="section-topline">
+          <div>
+            <p class="eyebrow">A GOOD PLACE TO START</p>
+            <h2 id="shop-title">The celebration shop</h2>
+          </div>
+          <p class="section-aside">Thoughtful little finds<br />for all the big days.</p>
+        </div>
+
+        <div class="shop-controls">
+          <div class="filters" role="group" aria-label="Filter products by category">
+            <button class="filter-button active" type="button" data-category="All" aria-pressed="true">Everything</button>
+            <button class="filter-button" type="button" data-category="Birthday Cards" aria-pressed="false">Cards</button>
+            <button class="filter-button" type="button" data-category="Invitations" aria-pressed="false">Invitations</button>
+            <button class="filter-button" type="button" data-category="Tickets" aria-pressed="false">Experiences</button>
+            <button class="filter-button" type="button" data-category="Gift Cards" aria-pressed="false">Gift cards</button>
+          </div>
+          <label class="search-field">
+            <span class="visually-hidden">Search the collection</span>
+            <span aria-hidden="true">⌕</span>
+            <input id="search" type="search" placeholder="Find something..." autocomplete="off" />
+          </label>
+        </div>
+
+        <p class="live-message" id="shop-message" role="status" aria-live="polite"></p>
+        <div class="product-grid" id="products" aria-live="polite" aria-busy="true"></div>
+      </section>
+
+      <section class="story-section" id="about">
+        <div class="story-mark" aria-hidden="true">✳</div>
+        <div class="story-copy">
+          <p class="eyebrow">A NOTE FROM US</p>
+          <h2>Because showing up<br />is its own kind of magic.</h2>
+          <p>We think the best gifts aren't always the biggest. They're the ones that say, “I thought of you.” Card Net makes it easy to send that feeling.</p>
+          <a class="text-link" href="#shop">Find a little something <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="story-stamp" aria-label="Made for moments that matter">
+          <span>MADE FOR</span><strong>moments<br />that matter</strong><span>WITH LOVE · ALWAYS</span>
+        </div>
+      </section>
+
+      <section class="contact-section page-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-intro">
+          <p class="eyebrow">WE'RE ALL EARS</p>
+          <h2 id="contact-title">Need a hand?</h2>
+          <p>Order question, big idea, or just want to say hello? Drop us a note.</p>
+          <a class="contact-email" href="#contact-form">Send us a note using the form below ↗</a>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <label>
+            Your name
+            <input name="name" type="text" autocomplete="name" placeholder="What should we call you?" required maxlength="100" />
+          </label>
+          <label>
+            Email address
+            <input name="email" type="email" autocomplete="email" placeholder="you@example.com" required maxlength="254" />
+          </label>
+          <label>
+            Your message
+            <textarea name="message" rows="3" placeholder="Tell us what's on your mind..." required maxlength="2000"></textarea>
+          </label>
+          <div class="form-submit-row">
+            <button class="button button-dark" type="submit">Send your note <span aria-hidden="true">↗</span></button>
+            <p id="contact-status" class="form-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark footer-wordmark" href="#home"><span class="wordmark-icon" aria-hidden="true">C</span> Card Net</a>
+      <p>Make a little moment memorable. © <span id="year"></span> Card Net</p>
+      <a href="#home">Back to top ↑</a>
+    </footer>
+
+    <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-modal="true" role="dialog" aria-hidden="true" inert>
+      <div class="drawer-heading">
+        <div><p class="eyebrow">YOUR GOODIES</p><h2 id="cart-title">Your bag <span id="drawer-count">(0)</span></h2></div>
+        <button class="icon-button" id="cart-close" type="button" aria-label="Close shopping bag">×</button>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-empty" id="cart-empty">
+        <span aria-hidden="true">✳</span>
+        <p>Your bag is taking a little breather.</p>
+        <a class="text-link" href="#shop" id="continue-shopping">Find something lovely →</a>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-subtotal"><span>Subtotal</span><strong id="cart-total">$0.00</strong></div>
+        <p class="cart-disclaimer">Shipping and any applicable taxes are calculated at checkout.</p>
+        <button class="button button-dark checkout-button" id="checkout-open" type="button" disabled>Continue to checkout <span aria-hidden="true">→</span></button>
+      </div>
+    </aside>
+
+    <dialog class="checkout-dialog" id="checkout-dialog" aria-labelledby="checkout-title">
+      <button class="icon-button dialog-close" id="checkout-close" type="button" aria-label="Close checkout">×</button>
+      <p class="eyebrow">ALMOST THERE</p>
+      <h2 id="checkout-title">Where should we send the good news?</h2>
+      <p class="checkout-note">Choose a secure card payment or pay directly by bank transfer.</p>
+      <form id="checkout-form">
+        <label>
+          Your name
+          <input name="name" type="text" autocomplete="name" required maxlength="100" />
+        </label>
+        <label>
+          Email address
+          <input name="email" type="email" autocomplete="email" required maxlength="254" />
+        </label>
+        <fieldset class="payment-methods">
+          <legend>Choose your payment method</legend>
+          <label class="payment-choice" for="payment-card">
+            <input id="payment-card" name="paymentMethod" type="radio" value="card" disabled />
+            <span class="payment-choice-icon" aria-hidden="true">▤</span>
+            <span class="payment-choice-copy"><strong>Pay by card</strong><small id="card-payment-help">Secure checkout</small></span>
+          </label>
+          <label class="payment-choice" for="payment-transfer">
+            <input id="payment-transfer" name="paymentMethod" type="radio" value="bank_transfer" disabled />
+            <span class="payment-choice-icon" aria-hidden="true">⇄</span>
+            <span class="payment-choice-copy"><strong>Bank transfer</strong><small id="transfer-payment-help">Pay directly from your bank</small></span>
+          </label>
+        </fieldset>
+        <p class="payment-setup-note" id="payment-setup-note" role="status"></p>
+        <div class="bank-transfer-details" id="bank-transfer-details" hidden></div>
+        <p class="checkout-total">Order total <strong id="checkout-total">$0.00</strong></p>
+        <p class="form-status" id="checkout-status" role="status" aria-live="polite"></p>
+        <button class="button button-dark checkout-submit" id="checkout-submit" type="submit" disabled>Choose a payment method <span aria-hidden="true">→</span></button>
+      </form>
+    </dialog>
+
+    <section class="assistant-panel" id="assistant-panel" aria-labelledby="assistant-title" aria-hidden="true" inert>
+      <div class="assistant-header">
+        <div class="assistant-avatar" aria-hidden="true">✳</div>
+        <div class="assistant-heading-copy">
+          <h2 id="assistant-title">Card Net assistant</h2>
+          <p><span class="assistant-online"></span><span id="assistant-availability">Here for whatever you need</span></p>
+        </div>
+        <button class="icon-button assistant-close" id="assistant-close" type="button" aria-label="Close Card Net assistant">×</button>
+      </div>
+      <div class="assistant-messages" id="assistant-messages" role="log" aria-live="polite" aria-relevant="additions text">
+        <div class="chat-message assistant-message">Hi! I can help you find a thoughtful gift, pick the right card, or answer questions. What’s on your mind?</div>
+      </div>
+      <div class="assistant-suggestions" id="assistant-suggestions">
+        <button type="button" data-prompt="Help me find a thoughtful birthday card">Find a birthday card</button>
+        <button type="button" data-prompt="What gifts do you have for under $20?">Gifts under $20</button>
+      </div>
+      <p class="assistant-status" id="assistant-status" role="status" aria-live="polite"></p>
+      <form class="assistant-form" id="assistant-form">
+        <label class="visually-hidden" for="assistant-input">Ask Card Net anything</label>
+        <input id="assistant-input" name="message" type="text" placeholder="Ask me anything..." maxlength="2000" autocomplete="off" required />
+        <button type="submit" aria-label="Send message"><span aria-hidden="true">↑</span></button>
+      </form>
+      <p class="assistant-disclaimer">AI can make mistakes. Never share passwords or card details.</p>
+    </section>
+    <button class="assistant-launcher" id="assistant-open" type="button" aria-label="Chat with the Card Net assistant" aria-controls="assistant-panel" aria-expanded="false">
+      <span class="assistant-launcher-spark" aria-hidden="true">✳</span><span>Ask us anything</span><span class="assistant-launcher-arrow" aria-hidden="true">↗</span>
+    </button>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

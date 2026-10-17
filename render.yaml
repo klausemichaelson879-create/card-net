@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: card-net
+    runtime: node
+    plan: free
+    region: oregon
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22.16.0
+      - key: NODE_ENV
+        value: production
+      - key: CARDNET_READ_ONLY
+        value: "true"
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
